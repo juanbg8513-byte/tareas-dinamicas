@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crónicas Pendientes | Lista de tareas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main class="app">
+
+        <header class="page-header">
+            <p class="eyebrow">✦ TU CUADERNO DE JORNADA ✦</p>
+            <h1>Crónicas <span>Pendientes</span></h1>
+            <p class="subtitle">
+                Cada tarea completada es una pequeña victoria.
+            </p>
+        </header>
+
+        <!-- Panel de progreso -->
+        <section class="progress-panel">
+
+            <div class="stat">
+                <span class="stat-number" id="total-count">0</span>
+                <span class="stat-label">Total de tareas</span>
+            </div>
+
+            <div class="stat">
+                <span class="stat-number" id="completed-count">0</span>
+                <span class="stat-label">Completadas</span>
+            </div>
+
+            <div class="stat">
+                <span class="stat-number" id="pending-count">0</span>
+                <span class="stat-label">Pendientes</span>
+            </div>
+
+            <div class="progress-track"
+                 id="progress-track"
+                 role="progressbar"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 aria-valuenow="0">
+
+                <div class="progress-fill" id="progress-fill"></div>
+
+            </div>
+
+            <p class="progress-caption" id="progress-caption">
+                0% completado
+            </p>
+
+        </section>
+
+        <!-- Sección de tareas -->
+        <section class="task-section">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">REGISTRO DE ACTIVIDADES</p>
+                    <h2>Tu lista de tareas</h2>
+                </div>
+
+                <span class="ornament">✧</span>
+            </div>
+
+            <!-- Formulario para agregar tareas -->
+            <form id="task-form" class="task-form">
+
+                <label class="sr-only" for="task-input">
+                    Escribe una tarea
+                </label>
+
+                <input
+                    type="text"
+                    id="task-input"
+                    placeholder="Escribe una nueva tarea..."
+                    maxlength="120"
+                    autocomplete="off"
+                >
+
+                <button type="submit" class="add-button">
+                    + Agregar tarea
+                </button>
+
+            </form>
+
+            <p id="form-message" class="form-message" aria-live="polite"></p>
+
+            <!-- Lista donde aparecen las tareas -->
+            <ul id="task-list" class="task-list" aria-live="polite">
+
+                <li class="empty-state">
+                    <span class="empty-icon">✦</span>
+                    <p>Aún no hay tareas en tu registro.</p>
+                    <span>Agrega tu primera misión para comenzar.</span>
+                </li>
+
+            </ul>
+
+        </section>
+
+        <footer class="page-footer">
+            <span>✦</span>
+            Un paso a la vez. Una misión a la vez.
+            <span>✦</span>
+        </footer>
+
+    </main>
+
+</body>
+</html>
